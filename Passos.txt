@@ -1,0 +1,42 @@
+//Criar o projecto com o node
+✅  npm init -y
+
+// Intalar o Express
+✅  npm install Express
+
+// configurar o arquivo package.json para reconhecer o *Import* //Abaixo do "main":"index.js"
+✅  "type" : "module"
+
+// Criar um arquivo ex: App.js para inciar o servidor.
+// Importar o Express e adicioná-lo à uma variável para facilitar o uso e crar também a variável da porta
+
+import express from "express"
+const app = express()
+const PORT = 3000
+//Criar a rota usando a função GET
+
+app.get(PORT, (req,res)=>{
+    res.json(arrayComOsDados)
+})
+
+// Adicionar a função que fará o servidor escutar essa porta
+
+app.listen(PORT,()=>{
+    console.log(`Servidor rodando em$ http:/localhost:${PORTA}/app/jogos`) // Um retorno quando o server for executado
+})
+
+// Excutar o Servidor com:
+
+✅ node app.js
+
+// usando o typeScript para maior organização e evitar erros.
+// nodemon para não precisar reiniciar o servidor toda vez
+//typescript: O motor do TS.
+//ts-node: Permite rodar arquivos .ts diretamente no Node.
+//nodemon: Reinicia o servidor sozinho sempre que você salvar um arquivo.
+// Arquivo tsConfig
+
+npm install typescript ts-node nodemon @types/express @types/node -D
+npx tsc --init
+
+
